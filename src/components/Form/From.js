@@ -5,9 +5,9 @@ const styles = {
   label:
     "block  tracking-wide text-[#545454] text-[14px] leading-[17px] font-medium mb-2",
   input:
-    "block appearance-none  font-normal h-[37px] text-[14px] w-full bg-gray-200 border  text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-2 focus:bg-white focus:border-[#3766E8]",
+    "block appearance-none  font-normal h-[37px] text-[14px] w-full bg-white border-2  text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:border-2 focus:bg-white focus:border-[#3766E8] placeholder-slate-400 focus:outline-none  ",
   select__input:
-    "block appearance-none   font-normal h-[37px] text-[14px] w-full bg-gray-200 border  text-gray-700 py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-2 focus:bg-white focus:border-[#3766E8] cursor-pointer",
+    "block appearance-none text-[#545454]  font-normal h-[37px] text-[14px] w-full bg-white border-2  text-gray-700 py-2 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:border-2 focus:bg-white focus:border-[#3766E8] cursor-pointer",
   radio__input:
     "form-check-input form-check-input appearance-none  rounded-full h-4 w-4 border-2 border-gray-300 bg-white checked:bg-white checked:border-4 checked:border-[#3766E8] focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer",
   radio__label:
@@ -23,6 +23,7 @@ const From = () => {
         <div>
           <label className={styles.label}>Company name</label>
           <input className={styles.input} placeholder="e.g. Example inc" />
+         
         </div>
 
         <div class="w-full">
@@ -30,8 +31,8 @@ const From = () => {
             Industry
           </label>
           <div class="relative">
-            <select className={styles.select__input} placeholder="Select">
-              <option value="" disabled selected>
+            <select className={styles.select__input} required>
+              <option value="" disabled hidden selected class="text-gray-400">
                 Select{" "}
               </option>
               <option>IT Services & Consulting</option>
@@ -60,7 +61,6 @@ const From = () => {
               <option>Block Chain</option>
               <option>Cybersecurity</option>
               <option>Digital Marketing</option>
-
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -107,7 +107,7 @@ const From = () => {
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio3"
-                value="option2"
+                value="option3"
               />
               <label className={styles.radio__label} for="inlineRadio20">
                 51-200
@@ -119,7 +119,7 @@ const From = () => {
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio4"
-                value="option2"
+                value="option4"
               />
               <label className={styles.radio__label} for="inlineRadio20">
                 201-500
@@ -131,7 +131,7 @@ const From = () => {
                 type="radio"
                 name="inlineRadioOptions"
                 id="inlineRadio5"
-                value="option2"
+                value="option5"
               />
               <label className={styles.radio__label} for="inlineRadio20">
                 500+
